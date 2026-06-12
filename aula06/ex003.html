@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(64, 67, 234);
+            color: white;
+            font: bold 20pt ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ola, mundo!</h1>
+    <p>Já me livrei da maldição.</p>
+
+    <script>
+    /*    var n1 = window.prompt('Digite 1 número')//window.prompt trata como string
+     var n2 = window.prompt('Digite outro número')
+     var s = n1 + n2
+     window.alert('A soma dos valores é ' + s)//+ concatenação resultado será  2 + 4 = 24
+     //(number + number ) para adição  
+     // (string + string) para concatenação */
+     var n1 = Number.parseInt(window.prompt('Digite um número: '))//Number.parseInt inteiro se n.nn  Number.parseFloat, hoje pode usar só number() para qualquer numero
+     var n2 = Number.parseInt(window.prompt('Digite outro número '))
+    
+     var s = n1 + n2
+     window.alert(`A soma dos valores de   ${'n1'} e  ${'n2'}  é   ${s}`)//todo texto entre crase,"${}placeHolder" o valor entre as chaves com aspas mostra o nome da variavel e sem aspas o valor da variavel
+     //window.alert('A soma dos valores é  ' + s)
+     // window.alert('A soma dos valores é  ' + string(s)) converte para string  string(s) valor do parenteses
+      </script>
+</body>
+
+</html>

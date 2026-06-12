@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(57, 116, 219);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos de DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <section id="sec" >Minha seção</section>
+
+    <script>
+        // Pega o corpo da pagina, ou seja, tudo que esta dentro do <body>.
+        var corpo = window.document.body
+
+        // Muda a cor de fundo do corpo da pagina para cinza.
+        corpo.style.background = 'grey'
+
+        // Escreve uma mensagem diretamente na pagina.
+        window.document.write('Ola, mundo! <br>')
+
+        // Mostra qual conjunto de caracteres a pagina esta usando.
+        // Neste caso, deve aparecer UTF-8.
+        window.document.write(window.document.charset + '<br>')
+
+        // Mostra o endereco completo da pagina no navegador.
+        window.document.write(window.document.URL + '<br>')
+
+        // Pega o primeiro paragrafo da pagina.
+        // O [0] significa "primeiro elemento encontrado".
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+        // Mostra apenas o texto que esta dentro do primeiro paragrafo.
+        window.document.write('Esta escrito assim: ' + p1.innerText + '<br>')
+
+        // Agora a variavel p1 passa a guardar o segundo paragrafo.
+        // O [1] significa "segundo elemento encontrado".
+        p1 = window.document.getElementsByTagName('p')[1]
+
+        // Mostra apenas o texto que esta dentro do segundo paragrafo.
+        window.document.write('Esta escrito assim: ' + p1.innerText + '<br>')
+
+        // Muda a cor do texto do segundo paragrafo para vermelho.
+        p1.style.color = 'red'
+
+        // innerText mostra somente o texto, sem as tags HTML.
+        // Por isso o <strong> nao aparece aqui.
+        document.write(p1.innerText)
+
+        // innerHTML mostra o conteudo com as tags HTML.
+        // Aqui o <strong> continua sendo interpretado pelo navegador.
+        document.write(p1.innerHTML)
+
+        // Exemplos de alerta:
+        // innerHTML mostraria o conteudo com tags.
+        // window.alert(p1.innerHTML)
+
+        // innerText mostraria apenas o texto.
+        // window.alert(p1.innerText)
+
+        // Pega a div que tem id="msg".
+        var d = window.document.getElementById('msg')
+
+        // Muda a cor de fundo da div para verde.
+        d.style.background = 'green'
+
+        // Troca o texto que aparece dentro da div.
+        d.innerText = 'Mudei o texto'
+
+        // Pega a section que tem id="sec".
+        //
+        // Sobre seletores:
+        // Seletor e o nome usado para apontar para algum elemento do HTML.
+        // Tudo que usamos para escolher um elemento pode ser chamado de seletor.
+        //
+        // p, h1, div, section:
+        // sao seletores de tag, porque selecionam elementos pelo nome da tag.
+        //
+        // id: identifica um unico elemento na pagina.
+        // No CSS e no querySelector, id usa #.
+        // Exemplo: #sec pega o elemento com id="sec".
+        //
+        // classe: pode ser usada em varios elementos.
+        // No CSS e no querySelector, classe usa ponto (.).
+        // Exemplo: .caixa pega elementos com class="caixa".
+        //
+        // tag: pega elementos pelo nome da tag HTML.
+        // Exemplo: section pega elementos <section>.
+        //
+        // Aqui juntamos tag + id:
+        // section#sec significa "pegue a section que tem id sec".
+        var sec = window.document.querySelector('section#sec')
+
+        // Altera alguns estilos da section usando JavaScript.
+        sec.style.color = 'orange'
+        sec.style.background = 'grey'
+        sec.style.fontFamily = 'verdana'
+        sec.style.fontSize = '30pt'
+
+        // Pega novamente a div com id="msg".
+        d = window.document.getElementById('msg')
+
+        // Troca o texto da div outra vez.
+        d.innerText = 'Ola'
+    </script>
+</body>
+</html>

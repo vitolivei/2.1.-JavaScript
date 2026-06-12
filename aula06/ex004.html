@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: black;
+            font: 20pt normal;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<h1>JavaScript na veia</h1>
+
+<script>
+    var nome = prompt("Qual é seu nome?")
+    
+    document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`)
+    document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}`)
+/* retorna: Seu nome em maiúsculas é FERNANDO
+Seu nome em minúsculas é fernando */
+
+/*    let nome = "vItOr" 
+ 
+     var nome =window.prompt('Qual é o seu nome')
+    document.write(`Ola <strong>${nome}</strong>'!Seu nome tem ${nome.length} letras. <br/>`)//quebra de linha dentro de tag
+    document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`)
+    document.write(`Seu nome em minusculo é ${nome.toLowerCase()}`)  */
+    /* retorna :Ola vitor'!Seu nome tem 5 letras.
+Seu nome em maiúsculas é VITOR */
+
+
+
+/* var nome = window.prompt('Qual é o seu nome completo?')
+var nomeFormatado = nome
+    .toLowerCase()
+    .split(' ')
+    .map(palavra =>
+        palavra.charAt(0).toUpperCase() + palavra.slice(1)
+    )
+    .join(' ')*/
+
+/* document.write(`Nome original: ${nome}<br>`)
+document.write(`Nome formatado: ${nomeFormatado}`) */
+/* retorna 'Nome original: Jose Antonio campos
+Nome formatado: Jose Antonio Campos' */ 
+</script>
+</body>
+</html>
